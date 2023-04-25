@@ -3,7 +3,7 @@
     "clientID": "client_Id",
     "clientSecret": "client_secret",
     "callbackUrl": "sitelinkiniz/callback",
-    "ownerId": "owner_rol_id",
+    "ownerRoleId": "owner_rol_id",
     "guildId": "server_id",
     "logChannelId": "log_kanal_id"
 }
