@@ -1,0 +1,59 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<%- include("../partials/header.ejs") %>
+
+  <% if(user){ %>
+
+    </br></br>
+    <% if (typeof errors !== 'undefined') { %>
+      <div class="alert alert-danger" role="alert">
+          <%= errors %>
+      </div>
+      <% } %>
+
+  </br></br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <form method="post" action="/uptime">
+            <center>
+              <h3>Proje Ekle</h3>
+            </center>
+            <form action="/uptime" method="post">
+              <input name="link" style="background-color: transparent; color: #3759a3;" type="url" name="link"
+                placeholder="https://fr3zy-youtube.glitch.me" class="form-control" required>
+              <br>
+              <div class="d-grid gap-2">
+                <button class="button1" style="filter: invert(1);" type="submit">Ekle</button>
+              </div>
+            </form>
+          </form>
+        </div>
+      </div>
+    </div>
+    <% } else {%>
+    </br>    </br>
+  </br>
+</br>
+</br>
+</br>
+</br>
+
+      <div class="container d-flex align-items-center justify-content-center">
+        <div class="card text-center">
+          <div class="card-body bg-dark">
+            <h5 class="card-title">Hata!</h5>
+            <p class="card-text">Botunuzu Uptime Etmek İçin Giriş Yapmanız Gerekiyor!</p>
+            <a class="button1" style="margin-right: 20px; filter: invert(1);" href="/callback">Giriş Yap</a>
+          </div>
+        </div>
+      </div>
+
+      <%}%>
+
+
+
+      <%- include("../partials/footer.ejs") %>
