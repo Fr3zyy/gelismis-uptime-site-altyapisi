@@ -111,7 +111,7 @@ app.get('/yetkililer', (req, res) => {
 	const user = req.user;
 
 	client.guilds.fetch(bot.guildId).then(guild => {
-		const role = guild.roles.cache.get(bot.ownerId);
+		const role = guild.roles.cache.get(bot.ownerRoleId);
 		const membersWithRole = role.members.map(member => {
 			return {
 				id: member.id,
